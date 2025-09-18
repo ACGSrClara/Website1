@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyline – Modernes Webprojekt</title>
+
+  <!-- Google Font (kann geändert werden) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header">
+    <a class="logo" href="#home">Skyline</a>
+
+    <button class="nav-toggle" aria-label="Menü öffnen/ schließen" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#home">Start</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#about">Über uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero (mit dezenter Parallax-Illusion) ===== -->
+  <section id="home" class="hero">
+    <div class="hero__content reveal">
+      <h1>Entdecke deine Stadt neu</h1>
+      <p>Ein modernes Template mit Animationen – tauscht einfach Bilder und Farben aus.</p>
+      <a class="btn" href="#gallery">Jetzt ansehen</a>
+    </div>
+    <!-- Austauschbares Hintergrundbild: siehe style.css (.hero::before) -->
+  </section>
+
+  <!-- ===== Highlight-Karten ===== -->
+  <section class="features container">
+    <article class="card reveal">
+      <h3>Schnell anpassen</h3>
+      <p>Texte und Bilder sind Platzhalter. Ersetzt sie durch eure Inhalte.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Sauber strukturiert</h3>
+      <p>Semantisches HTML, gut kommentiertes CSS, kleines JS – ideal für Klasse 10.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Leichte Effekte</h3>
+      <p>Scroll-Reveal, weiche Hover-Effekte, sanfte Bewegungen – auch mit „reduce motion“ bedacht.</p>
+    </article>
+  </section>
+
+  <!-- ===== Galerie (Bilder einfach austauschen) ===== -->
+  <section id="gallery" class="gallery container">
+    <h2 class="section-title reveal">Galerie</h2>
+    <div class="grid">
+      <!-- Bilder austauschen: src-URL ersetzen oder lokale Dateien nutzen -->
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky1/800/600" alt="Stadtansicht 1"><figcaption>Sonnenaufgang</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky2/800/600" alt="Stadtansicht 2"><figcaption>Architektur</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky3/800/600" alt="Stadtansicht 3"><figcaption>Brücken</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky4/800/600" alt="Stadtansicht 4"><figcaption>Nachtlichter</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky5/800/600" alt="Stadtansicht 5"><figcaption>Details</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/sky6/800/600" alt="Stadtansicht 6"><figcaption>Wege</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== Über uns ===== -->
+  <section id="about" class="about container">
+    <div class="about__img reveal">
+      <img src="https://picsum.photos/seed/team/700/500" alt="Teamfoto">
+    </div>
+    <div class="about__text reveal">
+      <h2 class="section-title">Über uns</h2>
+      <p>Wir gestalten Webseiten mit klarer Struktur und einfachem Design. Dieses Template zeigt, wie
+         man HTML, CSS und JavaScript sinnvoll trennt – ideal zum Lernen und Anpassen.</p>
+      <ul>
+        <li>Farben & Schrift in <code>:root</code> ändern</li>
+        <li>Bilder austauschen</li>
+        <li>Eigene Sektionen ergänzen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Kontakt ===== -->
+  <section id="contact" class="contact container">
+    <h2 class="section-title reveal">Kontakt</h2>
+    <form class="contact__form reveal" onsubmit="event.preventDefault(); alert('Danke! (Demo)');">
+      <label>Dein Name
+        <input type="text" required placeholder="Max Mustermann">
+      </label>
+      <label>E-Mail
+        <input type="email" required placeholder="max@example.com">
+      </label>
+      <label>Nachricht
+        <textarea rows="4" required placeholder="Deine Nachricht"></textarea>
+      </label>
+      <button class="btn" type="submit">Senden</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Skyline · Vorlage für den Unterricht</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
